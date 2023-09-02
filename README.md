@@ -33,7 +33,7 @@ This project is a Flixxit (Netflix clone) built using MERN stack and Firebase. I
 
 **Default credentials**
 ---
-- UserName : poojap@gmail.com
+- UserName : pp@gmail.com
 - Password : abc123
 
 

@@ -9,7 +9,6 @@ import { useNavigate, useParams } from "react-router-dom";
 
 
 export default function DetailPage() {
-debugger;
   const  movieId  = useParams();
     const [isScrolled, setIsScrolled] = useState(false);
     const movies = useSelector((state) => state.flixxit.movies);

@@ -4,8 +4,8 @@ import {
     createSlice,
   } from "@reduxjs/toolkit";
   import axios from "axios";
-  import { API_KEY, BASE_URL } from "../utils/constants";
-  
+  import { API_KEY, BASE_URL, DBSERVER_URL } from "../utils/constants";
+
   const initialState = {
     movies: [],
     genresLoaded: false,
@@ -81,7 +81,7 @@ import {
     async (email) => {
       const {
         data: { movies },
-      } = await axios.get(`http://localhost:5000/api/user/liked/${email}`);
+      } = await axios.get(`${DBSERVER_URL}/api/user/liked/${email}`);
       return movies;
     }
   );
@@ -91,7 +91,7 @@ import {
     async ({ movieId, email }) => {
       const {
         data: { movies },
-      } = await axios.put("http://localhost:5000/api/user/remove", {
+      } = await axios.put(`${DBSERVER_URL}/api/user/remove`, {
         email,
         movieId,
       });

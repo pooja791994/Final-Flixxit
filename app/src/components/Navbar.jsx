@@ -18,9 +18,14 @@ export default function Navbar({ isScrolled }) {
     { name: "About Us", link: "/aboutus" }
   ];
   const navigate = useNavigate();
-
+  const [user, setuser] = useState(false);
   onAuthStateChanged(firebaseAuth, (currentUser) => {
-    if (!currentUser) navigate("/login");
+    if (!currentUser){
+      navigate("/login");
+    }
+    else{
+      setuser(currentUser.email)
+    }
   });
 
   return (
@@ -66,6 +71,7 @@ export default function Navbar({ isScrolled }) {
           <button onClick={() => signOut(firebaseAuth)}>
             <FaPowerOff />
           </button>
+          <h1>{user}</h1>
         </div>
       </nav>
     </Container>

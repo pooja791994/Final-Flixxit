@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import React, { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import BackgroundImage from "../components/BackgroundImage";
 import Header from "../components/Header";

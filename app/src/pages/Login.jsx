@@ -20,7 +20,7 @@ export default function Login() {
     }
   };
 
-  onAuthStateChanged(firebaseAuth, (currentUser) => {
+  onAuthStateChanged(firebaseAuth, (currentUser) => {    
     if (currentUser) navigate("/");
   });
 
